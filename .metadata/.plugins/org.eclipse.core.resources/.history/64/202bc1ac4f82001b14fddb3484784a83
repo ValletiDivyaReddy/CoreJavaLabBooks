@@ -1,0 +1,21 @@
+package lab1;
+import java.util.*;
+public class Exercise1 {
+
+	public static void main(String[] args) {
+		// Create a method to find the sum of the cubes of the digits of an n digit number
+		Scanner s=new Scanner(System.in);
+		int a=s.nextInt();
+		int sum=0;
+		while(a>0) {
+			int r=a%10;
+			sum+=(r*r*r);
+			a-=r;
+			a/=10;
+		}
+		System.out.println(sum);
+		s.close();
+	}
+
+}
+

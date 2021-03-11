@@ -1,0 +1,11 @@
+package com.cg.jhlb7.ui;
+import com.cg.jhlb7.service.EmployeeService1;
+
+public class DetailsClass {
+
+	public static void main(String args[]) {	
+		EmployeeService1 Esobj = new EmployeeService1();
+		Esobj.getDetailsFromUser();
+	}
+
+}

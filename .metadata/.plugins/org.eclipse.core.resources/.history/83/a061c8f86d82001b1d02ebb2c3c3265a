@@ -1,0 +1,29 @@
+public class Library {
+public static void main(String args[]) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter Title of book");
+		String title = sc.nextLine();
+		System.out.println("Enter Unique Identification Number of book");
+		String identificationNumber = sc.next();
+		System.out.println("Enter No of Copies of book");
+		int numberOfCopies = sc.nextInt();
+		System.out.println("--------------------------------------------------------");
+		
+		Book obj = new Book(identificationNumber, title, numberOfCopies  );
+		System.out.println("Identification Number : "+obj.getIdentificationNumber());
+		System.out.println("Book Title : "+obj.getTitle());
+		System.out.println("No of Copies : "+obj.getNumberOfCopies());
+		System.out.println("--------------------------------------------------------");
+		
+		System.out.println("Enter no of books to Check Out");
+		int checkOutCount = sc.nextInt();
+		obj.checkOut(checkOutCount);
+		System.out.println("No of books after Check Out : "+obj.getNumberOfCopies());
+		System.out.println("--------------------------------------------------------");
+		
+		System.out.println("Enter no of books for Check In ");
+		int checkInCount = sc.nextInt();
+		obj.checkIn(checkInCount);
+		System.out.println("No of book copies after Check In : "+obj.getNumberOfCopies(…

@@ -1,0 +1,38 @@
+package com.cg.lb1.ui;
+import java.util.*;
+public class Exercise3 {
+
+	//The Fibonacci sequence with Recurssion.
+	static int a=1,b=1,c=0;
+	static int Fib(int n) {
+		if (n>0) {
+			c=b;
+			b+=a;
+			a=c;
+			Fib(n-1);
+		}
+		return a;
+	}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//The Fibonacci sequence without Recurssion.
+		/*
+		Scanner s=new Scanner(System.in);
+		int a=1,b=1;
+		int n=s.nextInt();
+		int temp=0;
+		for(int i=1;i<n;++i) {
+			temp=b;
+			b=a+b;
+			a=temp;
+		}
+		System.out.println(a);
+	*/
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		System.out.println(Fib(n-1));
+		s.close();
+	}
+}
